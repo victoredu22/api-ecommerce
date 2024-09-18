@@ -1,16 +1,15 @@
-import { Controller, Get, HttpStatus } from '@nestjs/common';
+import { Controller, Get, HttpStatus, UseGuards } from '@nestjs/common';
 import { StatusService } from './status.service';
+// Importa el guard que has creado
 import {
   ApiBadRequestResponse,
-  ApiHeader,
   ApiInternalServerErrorResponse,
   ApiOkResponse,
   ApiOperation,
-  ApiParam,
-  ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
 import { FilterResponse } from 'src/common/interfaces/filter-response.interface';
+import { AuthGuard } from 'src/common/guard/auth.guard';
 
 @ApiTags('status')
 @Controller('status')
@@ -27,6 +26,7 @@ import { FilterResponse } from 'src/common/interfaces/filter-response.interface'
 export class StatusController {
   constructor(private readonly statusService: StatusService) {}
 
+  @UseGuards(AuthGuard)
   @Get()
   @ApiOkResponse({ status: HttpStatus.OK })
   @ApiOperation({ summary: 'status server' })
