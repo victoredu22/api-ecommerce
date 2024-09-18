@@ -3,15 +3,15 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { StatusModule } from './modules/status/status.module';
 import { StatusController } from './modules/status/status.controller';
 import { StatusService } from './modules/status/status.service';
-import { ProductsController } from './modules/products/products/products.controller';
-import { ProductsModule } from './modules/products/products/products.module';
-import { ProductsService } from './modules/products/products/products.service';
 
 import { ConfigModule } from '@nestjs/config';
 
 import { JwtService } from '@nestjs/jwt';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
+import { ProductsModule } from './modules/products/products.module';
+import { ProductsController } from './modules/products/products.controller';
+import { ProductsService } from './modules/products/products.service';
 
 @Module({
   imports: [

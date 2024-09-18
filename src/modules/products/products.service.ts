@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Exceptions } from 'src/common/exceptions/exceptions';
-import { Product } from '../entities/products.entity';
+
 import { Model } from 'mongoose';
-import { ProductDto } from 'src/common/dto/ProductDto.dto';
+
+import { Product } from './entities/products.entity';
+import { ProductDto } from './dto/ProductDto.dto';
 
 @Injectable()
 export class ProductsService {

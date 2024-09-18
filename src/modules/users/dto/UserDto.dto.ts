@@ -10,6 +10,12 @@ export class UserDto {
   username: string;
 
   @ApiProperty({
+    example: 'test@gmail.com',
+    description: 'email of user',
+  })
+  email?: string;
+
+  @ApiProperty({
     description: 'The password of the user',
     example: 'password123',
   })
