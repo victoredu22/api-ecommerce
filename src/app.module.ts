@@ -19,6 +19,7 @@ import { ProductsService } from './modules/products/products.service';
       envFilePath: '.env',
       isGlobal: true,
     }),
+
     MongooseModule.forRoot('mongodb://localhost:27017/test'),
     StatusModule,
     ProductsModule,
