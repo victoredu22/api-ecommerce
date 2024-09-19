@@ -5,7 +5,7 @@ import { Exceptions } from 'src/common/exceptions/exceptions';
 import { Model } from 'mongoose';
 
 import { Product } from './entities/products.entity';
-import { ProductDto } from './dto/ProductDto.dto';
+import { ProductDto } from './dto/product.dto';
 
 @Injectable()
 export class ProductsService {
