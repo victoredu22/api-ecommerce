@@ -12,7 +12,7 @@ import { UsersService } from './users.service';
 import { ApiTags } from '@nestjs/swagger';
 
 import { AuthGuard } from 'src/common/guard/auth.guard';
-import { CreateUserDto } from './dto/createUser.dto';
+import { CreateUserDto } from 'src/common/dto/createUser.dto';
 
 @ApiTags('users')
 @Controller('users')

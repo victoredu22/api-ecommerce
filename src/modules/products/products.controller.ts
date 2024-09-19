@@ -14,7 +14,7 @@ import {
 } from '@nestjs/swagger';
 import { FilterResponse } from 'src/common/interfaces/filter-response.interface';
 import { ProductsService } from './products.service';
-import { ProductDto } from './dto/product.dto';
+import { ProductDto } from 'src/common/dto/product.dto';
 
 @ApiTags('products')
 @Controller('products')
