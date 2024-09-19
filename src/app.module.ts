@@ -20,9 +20,17 @@ import { ProductsService } from './modules/products/products.service';
       isGlobal: true,
     }),
     MongooseModule.forRoot(
-      'mongodb://mongo:sIfEWdPAJjrEyQKnbsjlcvyweKTkTAqU@autorack.proxy.rlwy.net:13119',
+      `mongodb://${
+        process.env.MONGO_USER +
+        ':' +
+        process.env.MONGO_PASS +
+        '@' +
+        process.env.MONGO_URL +
+        ':' +
+        process.env.MONGO_PORT
+      }`,
       {
-        dbName: 'eccommerce',
+        dbName: process.env.MONGO_DBNAME,
       },
     ),
 
