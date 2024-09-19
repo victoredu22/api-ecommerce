@@ -20,7 +20,9 @@ import { ProductsService } from './modules/products/products.service';
       isGlobal: true,
     }),
 
-    //MongooseModule.forRoot('mongodb://localhost:27017/test'),
+    MongooseModule.forRoot(
+      'mongodb://root:$tr0ngPa$$w0rD@192.34.61.157:27017/admin',
+    ),
     StatusModule,
     ProductsModule,
     UsersModule,
