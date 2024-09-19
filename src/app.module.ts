@@ -19,10 +19,13 @@ import { ProductsService } from './modules/products/products.service';
       envFilePath: '.env',
       isGlobal: true,
     }),
-
     MongooseModule.forRoot(
-      'mongodb://root:$tr0ngPa$$w0rD@192.34.61.157:27017/admin',
+      'mongodb://mongo:sIfEWdPAJjrEyQKnbsjlcvyweKTkTAqU@autorack.proxy.rlwy.net:13119',
+      {
+        dbName: 'eccommerce',
+      },
     ),
+
     StatusModule,
     ProductsModule,
     UsersModule,
