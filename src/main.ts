@@ -12,13 +12,6 @@ async function bootstrap() {
     // Puedes añadir tags para agrupar endpoints
     .build();
 
-  app.enableCors({
-    origin: '*', // Permitir todos los dominios
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Permitir cookies (opcional)
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  });
-
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document); // 'api' es el endpoint donde estará Swagger
 
