@@ -12,6 +12,9 @@ import { UsersModule } from './modules/users/users.module';
 import { ProductsModule } from './modules/products/products.module';
 import { ProductsController } from './modules/products/products.controller';
 import { ProductsService } from './modules/products/products.service';
+import { LaunchService } from './modules/launch/launch.service';
+import { LaunchController } from './modules/launch/launch.controller';
+import { LaunchModule } from './modules/launch/launch.module';
 
 @Module({
   imports: [
@@ -38,8 +41,9 @@ import { ProductsService } from './modules/products/products.service';
     ProductsModule,
     UsersModule,
     AuthModule,
+    LaunchModule,
   ],
-  controllers: [StatusController, ProductsController],
-  providers: [StatusService, ProductsService, JwtService],
+  controllers: [StatusController, ProductsController, LaunchController],
+  providers: [StatusService, ProductsService, JwtService, LaunchService],
 })
 export class AppModule {}
